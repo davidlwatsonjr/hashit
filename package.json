@@ -4,9 +4,13 @@
   "description": "File hashing web app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "lint": "eslint **.js",
-    "lint:fix": "eslint --fix *.js"
+    "eslint": "eslint",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\"",
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "lint:fix": "eslint --fix src/**/*.js",
+    "prettier": "prettier",
+    "start": "node src/index.js"
   },
   "author": "davidlwatsonjr",
   "repository": {
@@ -23,11 +27,12 @@
     "express-fileupload": "^1.4.0"
   },
   "devDependencies": {
-    "eslint": "8.9.0",
-    "eslint-config-prettier": "8.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-promise": "6.0.0",
-    "prettier": "2.5.1"
+    "prettier": "^2.8.8"
   }
 }

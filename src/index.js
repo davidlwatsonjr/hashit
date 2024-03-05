@@ -5,7 +5,7 @@ const fileUpload = require('express-fileupload');
 const app = express();
 
 app.use(fileUpload({createParentPath: true}));
-app.use(express.json());
+app.use(express.json({limit: '1GB'}));
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
