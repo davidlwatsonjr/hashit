@@ -3,10 +3,7 @@ const express = require("express");
 const fileUpload = require("express-fileupload");
 
 const app = express();
-
-app.use(fileUpload({ createParentPath: true }));
-app.use(express.json({ limit: "1GB" }));
-app.use(express.urlencoded({ extended: true }));
+app.use(fileUpload());
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
