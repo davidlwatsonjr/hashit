@@ -4,6 +4,8 @@
   "description": "File hashing web app",
   "main": "index.js",
   "scripts": {
+    "predeploy": "gcloud config set project hashit-worldwide",
+    "deploy": "gcloud run deploy hashit --source .",
     "eslint": "eslint",
     "format": "prettier --write \"src/**/*.js\"",
     "format:check": "prettier --check \"src/**/*.js\"",
